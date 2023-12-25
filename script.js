@@ -48,6 +48,6 @@ function evalString(e){
 	}
 	}
 	catch(e){
-	  alert(e.message);
+	  alert(e);
 	}
 }
