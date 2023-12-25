@@ -21,7 +21,9 @@ function isOperator(op){
   return false;
 }
 
-function evalString(str){
+function evalString(e){
+	const input  = document.getElementById("input1");
+	const str  = input.value;
 	try{
 	  for(let i = 0;i<str.length;i++){
 	    if((str[i]>=0 && str[i]<=9) || str[i] === ' '  || isOperator(str[i])){
@@ -46,6 +48,6 @@ function evalString(str){
 	}
 	}
 	catch(e){
-	  console.log(e.message);
+	  alert(e.message);
 	}
 }
