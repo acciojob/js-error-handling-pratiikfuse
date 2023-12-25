@@ -29,10 +29,10 @@ function evalString(e){
 	    if((str[i]>=0 && str[i]<=9) || str[i] === ' '  || isOperator(str[i])){
 	      if(isOperator(str[i])){
 	        if(i == 0){
-	          throw new SyntaxError("Expression should not start with invalid operator");
+	          throw new InvalidExprError("Expression should not start with invalid operator");
 	        }
 	        if(i == str.length-1){
-	          throw new SyntaxError("Expression should not end with invalid operator");
+	          throw new InvalidExprError("Expression should not end with invalid operator");
 	        }
 	      }
 	       if(i != str.length-1){
